@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'XanadauCondensed';
+  src: url(./XanadauCondensed.eot);
+  src: url(./XanadauCondensed.eot?#iefix) format('embedded-opentype'),
+       url(./XanadauCondensed.otf) format('otf'),
+       url(./XanadauCondensed.svg#XanadauCondensed) format('svg'),
+       url(./XanadauCondensed.woff) format('woff'),
+       url(./XanadauCondensed.woff2) format('woff2');
+}

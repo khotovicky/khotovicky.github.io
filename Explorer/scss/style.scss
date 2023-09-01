@@ -1,0 +1,421 @@
+@import "nullstyle.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+@mixin autor_card($avatar_size, $name_font_size) {
+    color: #FFFFFF;
+    display: flex;
+    align-items: start;
+    gap: 14px;
+    text-align: left;
+
+    &_image {
+        border-radius: 4px;
+        width: $avatar_size;
+        height: $avatar_size;
+    }
+    &_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-self: stretch;
+
+        &_name {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: $name_font_size;
+            line-height: 19px;
+        }
+        &_date {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 19px;
+        }
+    }
+}
+@mixin author_card_big {
+    @include autor_card(40px, 18px)
+}
+@mixin author_card_small {
+    @include autor_card(35px, 14px)
+}
+
+.content__overlay{
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.content{
+    background: url('../img/backimage.png') -5% 0/100% 100% no-repeat;
+}
+.about {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 99px;
+    text-align: center;
+}
+.about__title-image {
+    padding: 60px 0 52px;
+}
+.about__nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 74px;
+    &_item {
+        
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 14px;
+        /* identical to box height, or 127% */
+        letter-spacing: 1.3px;
+        text-transform: uppercase;
+        
+        cursor: pointer;
+
+        color: #FFFFFF;
+
+        &:nth-child(4){
+            padding-right: 20px;
+        }
+        &:hover:after{
+            content: '';
+            width: 100.5%;
+            height: 2px;
+            background-color: white;
+            display: block;
+            margin: 14px -1% -16px;
+        }
+    }
+}
+
+.about__articles {
+    background-color: #fff;
+}
+.about__articles_image {
+    min-height: 330px;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 24px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+.image1{
+    background-image: url('../img/image1.png');
+}
+.image2{
+    background-image: url('../img/image2.png');
+}
+.image3{
+    background-image: url('../img/image3.png');
+}
+.about__articles_tag {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 24px;
+    /* identical to box height, or 300% */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    padding: 0.5px 10px;
+
+    /* Rectangle */
+
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+}
+.about__articles_author {
+    @include author_card_big()
+}
+
+.about__articles_title {
+    /* The 10 most beautiful places you should visit in your life */
+    max-width: 470px;
+    text-align: left;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 35px;
+    /* or 125% */
+
+    color: #FFFFFF;
+
+
+}
+.about__articles_text {
+    /* Vestibulum ut placerat nisl. Cras sed purus tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis posuere nisi sit amet neque finibus vestibulum. Vivamus at leo ut turpis posuere molestie. Nullam at */
+    padding: 36px 76px 35px 60px;
+    text-align: left;
+
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    /* or 139% */
+
+    color: #333333;
+    span {
+        display: none;
+    }
+
+}
+.about__articles_link {
+        /* Continue Reading → */
+
+    padding-top: 4px;
+
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 30px;
+    /* identical to box height, or 176% */
+
+    color: #8D4FDB;
+    cursor: pointer;
+
+
+}
+.about__link {
+        /* Rectangle */
+    height: 211px;
+
+    background: #F1F1F1;
+
+}
+.about__link-text {
+    /* Want to read more? */
+    padding-top: 49px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    /* identical to box height, or 120% */
+    text-align: center;
+
+    color: #333333;
+
+
+}
+.about__link-button {
+    /* Visit Blog Archive */
+
+/* Rectangle */
+    margin: 21px auto;
+    padding: 8px 25px 7px;
+    width: 182px;
+
+    background: #8D4FDB;
+    border-radius: 3px;
+
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 30px;
+    /* identical to box height, or 300% */
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+
+}
+.stories__title {
+    /* Featured Stories */
+   
+    padding: 85px 0 25px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    /* identical to box height, or 100% */
+    text-align: center;
+
+    color: #333333;
+
+
+}
+.stories__subtitle {
+    /* Did you read our personal favorites? */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 33px;
+    /* identical to box height, or 143% */
+    text-align: center;
+
+    color: #A9AFB3;
+
+
+}
+.stories__links {
+    padding: 50px 0 135px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.story__image {
+    width: 300px;
+    height: 190px;
+    position: relative;
+}
+.image4 {
+    background-image: url('../img/image4.png');
+}
+.image5 {
+    background-image: url('../img/image5.png');
+}
+.image6 {
+    background-image: url('../img/image6.png');
+}
+.story__author-image {
+    /* IMAGE */
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+    border-radius: 4px;
+
+}
+.story__author-name {
+    /* Luke Cage */
+
+    position: absolute;
+    left: 67px;
+    bottom: 38px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height, or 136% */
+
+    color: #FFFFFF;
+
+
+}
+.story__date {
+    /* Oct 11, 2016 */
+
+    position: absolute;
+    left: 67px;
+    bottom: 20px;
+
+
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    /* identical to box height, or 138% */
+
+    color: #FFFFFF;
+
+
+}
+.story {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.story__title {
+    /* The 10 most beautiful places you should visit in your life */
+    max-width: 281px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    /* or 156% */
+
+    color: #000000;
+    a {
+        color: #000;
+    }
+}
+
+.all-stories__link {
+    /* Want to read all of our stories? */
+    padding-bottom: 90px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 30px;
+    /* identical to box height, or 200% */
+    text-align: center;
+
+    color: #333333;
+    a{
+        /* Read the full blog */
+
+
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 30px;
+        /* identical to box height, or 200% */
+        text-align: center;
+
+        color: #8D4FDB;
+
+    }
+}
+.footer {
+    padding: 50px 0 40px;
+    background-color: #000000;
+    /* Copyright © Explorer */
+
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    /* identical to box height, or 200% */
+    text-align: center;
+
+    color: #8B8B8B;
+    p{
+        padding: 5px;
+        span{
+            padding: 0 5px;
+        }
+    }
+
+
+}
+.f14{
+    font-size: 14px;
+}
+.f13{
+    font-size: 13px;
+}
