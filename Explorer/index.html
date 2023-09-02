@@ -3,24 +3,26 @@
 <head>
     <title>Explorer+</title>
     <meta charset="UTF-8">
-   
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="content">
         <div class="content__overlay">
-            <div class="about">
-                <div class="about__title-image">
-                    <img src="img/title-image.svg" alt="">
-                </div>
-                <div class="about__nav">
-                    <div class="about__nav_item">Home</div>
-                    <div class="about__nav_item">Blog</div>
-                    <div class="about__nav_item">Categories</div>
-                    <div class="about__nav_item">Pick category</div>
-                    <div class="about__nav_item">About us</div>
-                    <div class="about__nav_item">Contact us</div>
-                </div>
+            <section class="about">
+                <header>
+                    <div class="about__title-image">
+                        <img src="img/title-image.svg" alt="">
+                    </div>
+                    <nav class="about__nav">
+                        <div class="about__nav_item">Home</div>
+                        <div class="about__nav_item">Blog</div>
+                        <div class="about__nav_item">Categories</div>
+                        <div class="about__nav_item">Pick category</div>
+                        <div class="about__nav_item">About us</div>
+                        <div class="about__nav_item">Contact us</div>
+                    </nav>
+                </header>
                 <div class="about__articles">
                     <div class="about__articles_image image1">
                         <div class="about__articles_tag">Travel</div>
@@ -68,48 +70,50 @@
                     <div class="about__link-text">Want to read more?</div>
                     <button class="about__link-button">Visit Blog Archive</button>
                 </div>
-            </div>
+            </section>
         </div>
     </div>
-    <div class="stories__title">Featured Stories</div>
-    <div class="stories__subtitle">Did you read our personal favorites?</div>
-    <div class="stories__links">
-        <div class="story">
-            <div class="story__image image4">
-                <div class="story__author-image">
-                    <img src="img/author-image4.png" alt="">
+    <section class="stories">
+        <div class="stories__title">Featured Stories</div>
+        <div class="stories__subtitle">Did you read our personal favorites?</div>
+        <div class="stories__links">
+            <div class="story">
+                <div class="story__image image4">
+                    <div class="story__author-image">
+                        <img src="img/author-image4.png" alt="">
+                    </div>
+                    <div class="story__author-name">Luke Cage</div>
+                    <div class="story__date">Oct 11, 2016</div>
                 </div>
-                <div class="story__author-name">Luke Cage</div>
-                <div class="story__date">Oct 11, 2016</div>
+                <div class="story__title"><a href="#">The 10 most beautiful places you should visit in your life</a></div>
             </div>
-            <div class="story__title"><a href="#">The 10 most beautiful places you should visit in your life</a></div>
-        </div>
-        <div class="story">
-            <div class="story__image image5">
-                <div class="story__author-image">
-                    <img src="img/author-image5.png" alt="">
+            <div class="story">
+                <div class="story__image image5">
+                    <div class="story__author-image">
+                        <img src="img/author-image5.png" alt="">
+                    </div>
+                    <div class="story__author-name">Jessica Simpson</div>
+                    <div class="story__date">Jun 12, 2016</div>
                 </div>
-                <div class="story__author-name">Jessica Simpson</div>
-                <div class="story__date">Jun 12, 2016</div>
+                <div class="story__title"><a href="#">We found the most beautiful place for our party november</a></div>
             </div>
-            <div class="story__title"><a href="#">We found the most beautiful place for our party november</a></div>
-        </div>
-        <div class="story">
-            <div class="story__image image6">
-                <div class="story__author-image">
-                    <img src="img/author-image4.png" alt="">
+            <div class="story">
+                <div class="story__image image6">
+                    <div class="story__author-image">
+                        <img src="img/author-image4.png" alt="">
+                    </div>
+                    <div class="story__author-name">Luke Cage</div>
+                    <div class="story__date">Jun 12, 2016</div>
                 </div>
-                <div class="story__author-name">Luke Cage</div>
-                <div class="story__date">Jun 12, 2016</div>
+                <div class="story__title"><a href="#">Why New York is still our favorite city to visit</a></div>
             </div>
-            <div class="story__title"><a href="#">Why New York is still our favorite city to visit</a></div>
         </div>
-    </div>
-    <div class="all-stories__link">Want to read all of our stories? <a href="#">Read the full blog</a> </div>
-    <div class="footer">
+        <div class="all-stories__link">Want to read all of our stories? <a href="#">Read the full blog</a> </div>
+    </section>
+    <footer class="footer">
         <p><span class="f14">Copyright © Explorer</span><span class="f13">- Images used for demonstration purpose only (&nbsp;&nbsp;<a href="#" class="f13">Licenses</a>)</span></p>
         <p><span class="f14">Copyright ©<a href="#" class="f14">Studio Corvus</a></span><span class="f14">Powered by</span><a href="#" class="f13">Webflow</a></p>
-    </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>

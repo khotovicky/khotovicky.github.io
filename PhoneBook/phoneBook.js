@@ -6,7 +6,7 @@ function createPhoneBook() {
             return 'invalid'
         }
         if (!phoneBook[name]) {
-            return 'niema imienia'
+            return 'Этого имени нет'
         }
         return phoneBook[name]
     }
@@ -16,7 +16,7 @@ function createPhoneBook() {
             return 'invalid'
         }
         phoneBook[name] = number
-        return 'imię dodano'
+        return 'Имя добавлено'
     }
     
     function deleteNumber(name) {
@@ -24,10 +24,10 @@ function createPhoneBook() {
             return 'invalid'
         }
         if (!phoneBook[name]) {
-            return 'niema imienia'
+            return 'Этого имени нет'
         }
         delete phoneBook[name]
-        return "imię usunięto"
+        return "Имя удалено"
     }
     return {
         getNumber,
@@ -54,8 +54,6 @@ function perfomCommand(command) {
         return "Invalid"
     }
 }
-
-
 
  while (true) {
      const a = prompt("Введите команду") // get Jura // set Vitya 8327489327498 // delete Kostja // exit 
