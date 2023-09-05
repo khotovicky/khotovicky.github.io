@@ -7,6 +7,7 @@ function initNotificationsService(overlayElement) {
         notification.style.display = 'flex'
         overlayElement.classList.add('active')
         notificationText.innerText = text
+        notificationButton.focus()
     }
     
     function hideNotification() {
