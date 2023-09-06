@@ -1,7 +1,6 @@
 function initOrderFormService(showNotification) {
     const orderForm = document.querySelector('#order-form')
     const fields = Array.from(orderForm.querySelectorAll('.field'))
-    // const submitButton = orderForm.querySelector('#order-form p button')
 
     function clearUnfilledMarks() {
         for (let field of fields) {
