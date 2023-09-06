@@ -1,4 +1,4 @@
-**#Explorer**
+# Explorer
 
 https://khotovicky.github.io/Explorer/
 
