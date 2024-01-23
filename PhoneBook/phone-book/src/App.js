@@ -1,4 +1,4 @@
-import './App.css'
+import './css/App.css'
 import { useState } from 'react'
 import { Input } from './components/Input.js'
 import { useHistory } from './hooks/history'
@@ -23,15 +23,17 @@ export function App() {
         historyElements={history.elements}
         deleteHistoryElement={history.deleteElement}
       />
-      <Input
-        value={command}
-        setValue={setCommand}
-      />
-      <button onClick={perfomCommand}>Enter</button>
-      {(history.elements.length) > 0 && <button onClick={history.deleteHistory}>Delete history</button>}
-      <PhoneBook
-        phoneBookArray={phoneBookArray}
-      />
+      <div className='inputPhoneBook'>
+        <Input
+          value={command}
+          setValue={setCommand}
+        />
+        <button onClick={perfomCommand}>Enter</button>
+        {history.elements.length > 0 && <button onClick={history.deleteHistory}>Delete history</button>}
+        <PhoneBook
+          phoneBookArray={phoneBookArray}
+        />
+      </div>
     </div>
   )
 }
